@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำร้องขอโอนย้ายสาขาวิชาต่างคณะ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <header class="form-header">
+            <div class="logo">
+                <img src="/images/MJU_LOGO.svg.png" alt="KMUTT Logo">
+            </div>
+            <div class="header-text">
+                <h2>คำร้องขอโอนย้ายสาขาวิชาต่างคณะ</h2>
+                <p>สำหรับหลักสูตร 4 ปี และหลักสูตร 4 ปีเทียบเข้าเรียน (2ปี)</p>
+            </div>
+            <div class="doc-info">
+                <p>มจท 16 หน้า 1</p>
+            </div>
+        </header>
+
+        <div class="header-details">
+            <div class="date-container">
+                <p>เขียนที่ มหาวิทยาลัยแม่โจ้</p><br>
+                <div class="date-fields">
+                    <label>วันที่</label>
+                    <input type="date" class="date-input" id="transferDate" required>
+                    <p class="error-text" id="transferDateError"></p>
+                </div>
+                
+            </div>
+        </div>
+
+        <form id="transferForm">
+            <div class="form-section">
+                <div class="info-box">
+                    <div class="box-line">
+                        <label>เรื่อง</label>
+                        <p>ขอโอนย้ายสาขาวิชาต่างคณะ</p>
+                    </div>
+                    <div class="box-line">
+                        <label>เรียน</label>
+                        <p>คณบดีคณะ (คณะใหม่)</p>
+                        <select class="full-width-input" id="newFaculty" required title="กรุณาเลือกคณะที่ต้องการโอนย้าย">
+                            <option value="" disabled selected>เลือกคณะที่ต้องการโอนย้าย</option>
+                            <option value="คณะบริหารธุรกิจ">คณะบริหารธุรกิจ</option>
+                            <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                            <option value="คณะผลิตกรรมการเกษตร">คณะผลิตกรรมการเกษตร</option>
+                            <option value="คณะศิลปศาสตร์">คณะศิลปศาสตร์</option>
+                            <option value="คณะสถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม">คณะสถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม</option>
+                            <option value="คณะสารสนเทศและการสื่อสาร">คณะสารสนเทศและการสื่อสาร</option>
+                            <option value="คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ">คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ</option>
+                            <option value="คณะวิศวกรรมและอุตสาหกรรมเกษตร">คณะวิศวกรรมและอุตสาหกรรมเกษตร</option>
+                            <option value="คณะพัฒนาการท่องเที่ยว">คณะพัฒนาการท่องเที่ยว</option>
+                            <option value="คณะเศรษฐศาสตร์">คณะเศรษฐศาสตร์</option>
+                            <option value="คณะสัตวศาสตร์และเทคโนโลยี">คณะสัตวศาสตร์และเทคโนโลยี</option>
+                            <option value="คณะพยาบาลศาสตร์">คณะพยาบาลศาสตร์</option>
+                            <option value="คณะสัตวแพทยศาสตร์">คณะสัตวแพทยศาสตร์</option>
+                            <option value="วิทยาลัยบริหารศาสตร์">วิทยาลัยบริหารศาสตร์</option>
+                            <option value="วิทยาลัยพลังงานทดแทน">วิทยาลัยพลังงานทดแทน</option>
+                            <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
+                        </select>
+                        <p class="error-text" id="newFacultyError"></p>
+                    </div>
+                    
+                    <div class="box-line">
+                        <label>สิ่งที่ส่งมาด้วย:</label>
+                        <p>ใบรายงานผลการศึกษา</p>
+                    </div>
+                    
+                    <div class="box-line">
+                        <label>ข้าพเจ้า</label>
+                        <input type="radio" id="mr" name="title" value="นาย">
+                        <label for="mr">นาย</label>
+                        <input type="radio" id="mrs" name="title" value="นาง">
+                        <label for="mrs">นาง</label>
+                        <input type="radio" id="ms" name="title" value="นางสาว">
+                        <label for="ms">นางสาว</label>
+                        <label class="ml-4">ชื่อ-นามสกุล</label>
+                        <input type="text" class="full-width-input" id="studentName" required maxlength="150" pattern="^[a-zA-Zก-๙\s]+$" title="กรุณากรอกชื่อ-นามสกุลด้วยอักษรเท่านั้น (ไม่เกิน 150 ตัวอักษร)">
+                        <p class="error-text" id="studentNameError"></p>
+                    </div>
+                    
+                    <div class="box-line">
+                        <label>รหัสนักศึกษา</label>
+                        <input type="text" class="small-input" id="studentId" required pattern="^\d{10}$" title="กรุณากรอกรหัสนักศึกษาเป็นตัวเลข 10 หลัก">
+                        <p class="error-text" id="studentIdError"></p>
+                        
+                        <label class="ml-4">โทรศัพท์มือถือ</label>
+                        <input type="text" class="small-input" id="phoneNumber" required pattern="^\d{10}$" title="กรุณากรอกเบอร์โทรศัพท์เป็นตัวเลข 10 หลัก">
+                        <p class="error-text" id="phoneNumberError"></p>
+                        
+                        <label class="ml-4">ระบบ</label>
+                        <input type="text" class="small-input" id="system">
+                        <p class="error-text" id="systemError"></p>
+                    </div>
+                    
+                    
+                    
+                    <div class="box-line">
+                        <label>หลักสูตร</label>
+                        <input type="checkbox" id="curriculum_4" name="curriculum" required>
+                        <label for="curriculum_4">4-5 ปี</label>
+                        <input type="checkbox" id="curriculum_4_2" name="curriculum">
+                        <label for="curriculum_4_2">4 ปีเทียบเข้าเรียน (2ปี)</label>
+                        
+                        <input type="radio" id="semester_normal" name="semester_type" required>
+                        <label for="semester_normal">ภาคปกติ</label>
+                        <input type="radio" id="semester_special" name="semester_type">
+                        <label for="semester_special">ภาคสมทบ</label>
+                    </div>
+                    
+                    <div class="box-line">
+                        <label>สาขาวิชา</label>
+                        <input type="text" class="full-width-input" id="major" required maxlength="100">
+                        <label class="ml-4">คณะ</label>
+                        <select class="full-width-input" id="originalFaculty" required>
+                            <option value="" disabled selected>เลือกคณะที่สังกัด</option>
+                            <option value="คณะบริหารธุรกิจ">คณะบริหารธุรกิจ</option>
+                            <option value="คณะวิทยาศาสตร์">คณะวิทยาศาสตร์</option>
+                            <option value="คณะผลิตกรรมการเกษตร">คณะผลิตกรรมการเกษตร</option>
+                            <option value="คณะศิลปศาสตร์">คณะศิลปศาสตร์</option>
+                            <option value="คณะสถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม">คณะสถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม</option>
+                            <option value="คณะสารสนเทศและการสื่อสาร">คณะสารสนเทศและการสื่อสาร</option>
+                            <option value="คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ">คณะเทคโนโลยีการประมงและทรัพยากรทางน้ำ</option>
+                            <option value="คณะวิศวกรรมและอุตสาหกรรมเกษตร">คณะวิศวกรรมและอุตสาหกรรมเกษตร</option>
+                            <option value="คณะพัฒนาการท่องเที่ยว">คณะพัฒนาการท่องเที่ยว</option>
+                            <option value="คณะเศรษฐศาสตร์">คณะเศรษฐศาสตร์</option>
+                            <option value="คณะสัตวศาสตร์และเทคโนโลยี">คณะสัตวศาสตร์และเทคโนโลยี</option>
+                            <option value="คณะพยาบาลศาสตร์">คณะพยาบาลศาสตร์</option>
+                            <option value="คณะสัตวแพทยศาสตร์">คณะสัตวแพทยศาสตร์</option>
+                            <option value="วิทยาลัยบริหารศาสตร์">วิทยาลัยบริหารศาสตร์</option>
+                            <option value="วิทยาลัยพลังงานทดแทน">วิทยาลัยพลังงานทดแทน</option>
+                            <option value="วิทยาลัยนานาชาติ">วิทยาลัยนานาชาติ</option>
+                        </select>
+                    </div>
+                    <p class="error-text" id="majorError"></p>
+                    <p class="error-text" id="originalFacultyError"></p>
+                    <div class="box-line">
+                        <label>มีความประสงค์จะขอโอนย้ายไปสาขาวิชา</label>
+                        <input type="text" class="full-width-input" id="transferMajor" required maxlength="300">
+                        <label class="ml-4">เนื่องจาก</label>
+                        <input type="text" class="full-width-input" id="transferReason" required maxlength="300">
+                    </div>
+                    <p class="error-text" id="transferMajorError"></p>
+                    <p class="error-text" id="transferReasonError"></p>
+                </div>
+
+                <div class="info-box mt-4">
+                    <p>ทั้งนี้ ข้าพเจ้ามีคุณสมบัติครบถ้วนในการขอโอนย้ายไปสาขาวิชา ดังนี้ คือ</p>
+                    <p><strong>หลักสูตร 4 ปีเทียบเข้าเรียน (2ปี)</strong>
+                        จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนเข้าไม่น้อยกว่า 2 ภาคการศึกษาปกติ</p>
+                    <p class="indent">- ได้ศึกษาตามแผนการศึกษาในสาขาวิชาเดิมมาแล้วไม่น้อยกว่า <u>1 ภาคการศึกษาปกติ</u>
+                    </p>
+                    <p class="indent">- มีหน่วยกิตสะสมไม่น้อยกว่า <u>18 หน่วยกิต</u>
+                        และมีแต้มระดับคะแนนเฉลี่ยสะสมไม่น้อยกว่า <u>2.00</u></p>
+                    <p><strong>หลักสูตร 4 ปี</strong></p>
+                    <p class="indent">- ได้ศึกษาตามแผนการศึกษาในสาขาวิชาเดิมมาแล้วไม่น้อยกว่า <u>2 ภาคการศึกษาปกติ</u>
+                    </p>
+                    <p class="indent">- มีหน่วยกิตสะสมไม่น้อยกว่า <u>30 หน่วยกิต</u>
+                        และมีแต้มระดับคะแนนเฉลี่ยสะสมไม่น้อยกว่า <u>2.00</u></p>
+                    <div class="box-line mt-2">
+                        <label>และยื่นคำร้องโอนย้ายสาขาวิชาภายในคณะที่</label>
+                        <input type="text" class="full-width-input" id="transferFacultySubmit" required>
+                    </div>
+                    <p class="error-text" id="transferFacultySubmitError"></p>
+                    <p class="mt-2">จึงเรียนมาเพื่อโปรดพิจารณาอนุมัติ</p>
+                </div>
+            </div>
+
+            <div class="signature-section">
+                <p>ขอแสดงความนับถือ</p>
+                <div class="signature-line">
+                    <p>(<input type="text" class="signature-input" placeholder="ชื่อ-นามสกุล" id="signatureName" required>)</p>
+                </div>
+                <div class="signature-line">
+                    <p>นักศึกษา</p>
+                </div>
+            </div>
+
+            <div class="two-column-section">
+                <div class="column-box">
+                    <div class="column-header">
+                        <p>ความเห็นชอบของสาขาวิชาเดิม</p>
+                    </div>
+                    <div class="column-item">
+                        <p>(2) ความเห็นจากอาจารย์ที่ปรึกษา</p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="programDirectorOpinion" required></p>
+                            <p class="error-text" id="programDirectorOpinionError"></p>
+                            <div class="signature-line">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-นามสกุล" id="advisorName" required>)</p>
+                                <p class="error-text" id="programDirectorNameErrorPage1"></p>
+                            </div>
+                            <p>อาจารย์ที่ปรึกษา</p>
+                            <p>วันที่ <input type="date" class="date-input" id="advisorDate" required></p>
+                            <p class="error-text" id="programDirectorDateErrorPage1"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-box">
+                    <div class="column-header">
+                        <p>ความเห็นชอบของสาขาวิชาที่ประสงค์จะโอนย้าย</p>
+                    </div>
+                    <div class="column-item">
+                        <p>(5) ความเห็นประธานกรรมการบริหารหลักสูตร</p>
+                        
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="programDirectorOpinion" required></p>
+                            <p class="error-text" id="programDirectorOpinionError"></p>
+                            <div class="signature-line">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-นามสกุล" id="programDirectorName" required>)</p>
+                                <p class="error-text" id="programDirectorOpinionError"></p> 
+                            </div>
+                            <p>ประธานกรรมการบริหารหลักสูตร</p>
+                            <p>วันที่ <input type="date" class="date-input" id="programDirectorDate" required></p>
+                            <p class="error-text" id="programDirectorDateErrorPage1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="form-actions">
+                <button type="submit" class="submit-button">ไปหน้า 2</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="jvs.js" defer></script>
+</body>
+</html>

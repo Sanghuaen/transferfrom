@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ย้ายสาขาวิชาต่างคณะ (หน้า 2)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <header class="form-header">
+            <div class="header-text"></div>
+            <div class="doc-info">
+                <p>มจท 16 หน้า 2</p>
+            </div>
+        </header>
+
+        <form id="transferFormPage2">
+            <div class="two-column-section">
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(3) ความเห็นประธานกรรมการบริหารหลักสูตร</p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="programDirectorOpinion" required></p>
+                            <p class="error-text" id="programDirectorOpinionError"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล" id="programDirectorNamePage2" required>)</p>
+                                <p class="error-text" id="programDirectorNameErrorPage2"></p>
+                                </div>
+                            </div>
+                            <p>ประธานกรรมการบริหารหลักสูตร</p>
+                            <p>วันที่ <input type="date" class="date-input" id="programDirectorDatePage2" required></p>
+                            <p class="error-text" id="programDirectorDateErrorPage2"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(6) ความเห็นคณบดีคณะ</p>
+                        <div class="radio-options">
+                            <input type="radio" id="dean_approve" name="dean_decision" value="อนุมัติ" required>
+                            <label for="dean_approve">อนุมัติ</label>
+                            <input type="radio" id="dean_disapprove" name="dean_decision" value="ไม่อนุมัติ">
+                            <label for="dean_disapprove">ไม่อนุมัติ</label>
+                        </div>
+                        <p class="error-text" id="deanDecisionError"></p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="deanOpinion" required></p>
+                            <p class="error-text" id="deanOpinionError"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล" id="deanName"
+                                        required>)</p>
+                                <p class="error-text" id="deanNameError"></p>
+                                </div>
+                            </div>
+                            <p>คณบดีคณะ</p>
+                            <p>วันที่ <input type="date" class="date-input" id="deanDate" required></p>
+                            <p class="error-text" id="deanDateError"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column-section">
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(4) ความเห็นคณบดีคณะ</p>
+                        <div class="radio-options">
+                            <input type="radio" id="dean_agree" name="dean_decision_original" value="เห็นชอบ" required>
+                            <label for="dean_agree">เห็นชอบ</label>
+                            <input type="radio" id="dean_disagree" name="dean_decision_original" value="ไม่เห็นชอบ">
+                            <label for="dean_disagree">ไม่เห็นชอบ</label>
+                        </div>
+                        <p class="error-text" id="deanOriginalDecisionError"></p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="deanOpinionOriginal" required></p>
+                            <p class="error-text" id="deanOpinionOriginalError"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล"
+                                        id="deanNameOriginal" required>)</p>
+                                <p class="error-text" id="deanNameOriginalError"></p>
+                                </div>
+                            </div>
+                            <p>คณบดีคณะ</p>
+                            <p>วันที่ <input type="date" class="date-input" id="deanDateOriginal" required></p>
+                            <p class="error-text" id="deanDateOriginalError"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(7) งานเงินรายได้ กองคลัง ชั้น 1 สำนักงานอธิการบดี</p>
+                        <p>ได้รับชำระเงินจำนวน 500 บาท เป็นที่เรียบร้อยแล้ว</p>
+                        <p>และได้ออกใบเสร็จรับเงินเล่มที่ <input type="text" class="small-input" id="receiptBook"
+                                required> เลขที่ <input type="text" class="small-input" id="receiptNumber" required></p>
+                        <p class="error-text" id="receiptInfoError"></p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="receiverOpinion"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล"
+                                        id="receiverName" required>)</p>
+                                <p class="error-text" id="receiverNameError"></p>
+                                </div>
+                            </div>
+                            <p>ผู้รับเงิน</p>
+                            <p>นักวิชาการเงินและบัญชี</p>
+                            <p>วันที่ <input type="date" class="date-input" id="receiverDate" required></p>
+                            <p class="error-text" id="receiverDateError"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column-section">
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(8) ความเห็นผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ</p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="directorOpinion" required></p>
+                            <p class="error-text" id="directorOpinionError"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล"
+                                        id="directorName" required>)</p>
+                                <p class="error-text" id="directorNameError"></p>
+                                </div>
+                            </div>
+                            <p>ผู้อำนวยการสำนักบริหารและพัฒนาวิชาการ</p>
+                            <p>วันที่ <input type="date" class="date-input" id="directorDate" required></p>
+                            <p class="error-text" id="directorDateError"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(9) ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียนฯ</p>
+                        <div class="signature-block">
+                            <p><input type="text" class="signature-input" id="headOpinion" required></p>
+                            <p class="error-text" id="headOpinionError"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล" id="headName"
+                                        required>)</p>
+                                <p class="error-text" id="headNameError"></p>
+                                </div>
+                            </div>
+                            <p>หัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</p>
+                            <p>วันที่ <input type="date" class="date-input" id="headDate" required></p>
+                            <p class="error-text" id="headDateError"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column-section">
+                <div class="column-box">
+                    <div class="column-item">
+                        <p>(10) สำหรับเจ้าหน้าที่ดำเนินการ</p>
+                        <p>ดำเนินการย้ายสาขาวิชาเป็นที่เรียบร้อยแล้ว</p>
+                        <p>รหัสนักศึกษาใหม่คือ <input type="text" id="newStudentId" required></p>
+                        <p class="error-text" id="newStudentIdError"></p>
+                        <div class="signature-block">
+                            
+                            <p><input type="text" class="signature-input" id="officerOpinion"></p>
+                            <div class="signature-line">
+                                <div class="field-container">
+                                <p>(<input type="text" class="signature-input" placeholder="ชื่อ-สกุล"
+                                        id="officerName" required>)</p>
+                                <p class="error-text" id="officerNameError"></p>
+                                </div>
+                            </div>
+                            <p>ตำแหน่ง นักวิชาการศึกษา</p>
+                            <p>วันที่ <input type="date" class="date-input" id="officerDate" required></p>
+                            <p class="error-text" id="officerDateError"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-box empty-box">
+                </div>
+            </div>
+
+            <div class="note-section">
+                <p class="note-header"><u>หมายเหตุ</u></p>
+                <ul class="note-list">
+                    <li>- การโอนย้ายสาขาวิชาภายในคณะและต่างคณะ จะกระทำได้เพียงครั้งเดียว</li>
+                    <li>- การยื่นคำร้องขอโอนย้ายสาขาวิชาภายในคณะและต่างคณะ ที่ได้รับอนุมัติแล้ว
+                        จะต้องยื่นที่กลุ่มภารกิจทะเบียนเรียนประมวลผล และรับเข้าสำนักบริหารและพัฒนาวิชาการ
+                        ก่อนเปิดภาคเรียนปกติที่ขอโอนย้าย <u>ไม่น้อยกว่า 4 สัปดาห์</u></li>
+                    <li>- นักศึกษาที่ขอโอนย้ายสาขาวิชาต่างคณะ จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนเข้า
+                        ก่อนจบการศึกษาและมีสิทธิ์ขอรับปริญญา ดังนี้</li>
+                    <li><strong>หลักสูตร 4 ปีเทียบเข้าเรียน (2ปี)</strong> จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนเข้า
+                        <u>ไม่น้อยกว่า 2 ภาคการศึกษาปกติ</u>
+                    </li>
+                    <li><strong>หลักสูตร 4 ปี</strong> จะต้องมีระยะเวลาศึกษาอยู่ในสาขาวิชาที่โอนย้าย <u>ไม่น้อยกว่า 4
+                            ภาคการศึกษาปกติ</u></li>
+                </ul>
+            </div>
+
+            <div class="pagination-link">
+                <a href="index.html">กลับไปหน้าแรก</a>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitRequestButton">ส่งคำร้อง</button>
+            </div>
+
+            <div id="successModal" class="modal-container hidden">
+                <div class="modal-content">
+                    <span class="modal-close-button">&times;</span>
+                    <div class="modal-body">
+                        <h3>ส่งคำร้องสำเร็จ!</h3>
+                        <p>ระบบได้รับคำร้องของคุณแล้ว และจะดำเนินการต่อไป</p>
+                        <button id="modalCloseButton" class="modal-ok-button">ตกลง</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
